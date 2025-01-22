@@ -1,10 +1,10 @@
 "use client"
-import CustomPCBuildForm from './components/CustomPCBuildForm';
+import ProgrammerJobForm from './components/ProgrammerJobForm';
 
 export default function Home() {
   return (
     <div>
-      <CustomPCBuildForm />
+      <ProgrammerJobForm />
     </div>
   );
 }
