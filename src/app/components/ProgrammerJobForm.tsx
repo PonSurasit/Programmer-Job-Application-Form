@@ -621,36 +621,60 @@ const JobApplicationForm = () => {
                 </div>
                 <div>
                   <p className="text-sm text-gray-500">{t.programmingSkills}</p>
-                  <p className="font-medium">
+                  {/* <p className="font-medium">
                     {[
                       ...formData.programmingSkills.filter(skill => skill !== 'อื่นๆ'),
                       ...formData.programmingSkills
                         .filter(skill => skill === 'อื่นๆ')
                         .map(skill => `${skill} (${formData.otherProgrammingSkill?.replace(/\s+/g, '')})`)
                     ].join(',')}
+                  </p> */}
+                   <p className="font-medium">
+                    {[
+                      ...formData.programmingSkills.filter(skill => skill !== 'อื่นๆ'),
+                      ...formData.programmingSkills
+                        .filter(skill => skill === 'อื่นๆ')
+                        .map(skill => `${skill} (${formData.otherProgrammingSkill})`)
+                    ].join(',')}
                   </p>
                 </div>
 
                 <div>
                   <p className="text-sm text-gray-500">{t.frameworks}</p>
-                  <p className="font-medium">
+                  {/* <p className="font-medium">
                     {[
                       ...formData.frameworks.filter(framework => framework !== 'อื่นๆ'),
                       ...formData.frameworks
                         .filter(framework => framework === 'อื่นๆ')
                         .map(framework => `${framework} (${formData.otherFramework?.replace(/\s+/g, '')})`)
                     ].join(',')}
+                  </p> */}
+                   <p className="font-medium">
+                    {[
+                      ...formData.frameworks.filter(framework => framework !== 'อื่นๆ'),
+                      ...formData.frameworks
+                        .filter(framework => framework === 'อื่นๆ')
+                        .map(framework => `${framework} (${formData.otherFramework})`)
+                    ].join(',')}
                   </p>
                 </div>
 
                 <div>
                   <p className="text-sm text-gray-500">{t.languages}</p>
-                  <p className="font-medium">
+                  {/* <p className="font-medium">
                     {[
                       ...formData.languages.filter(language => language !== 'อื่นๆ'),
                       ...formData.languages
                         .filter(language => language === 'อื่นๆ')
                         .map(language => `${language} (${formData.otherLanguage?.replace(/\s+/g, '')})`)
+                    ].join(',')}
+                  </p> */}
+                  <p className="font-medium">
+                    {[
+                      ...formData.languages.filter(language => language !== 'อื่นๆ'),
+                      ...formData.languages
+                        .filter(language => language === 'อื่นๆ')
+                        .map(language => `${language} (${formData.otherLanguage})`)
                     ].join(',')}
                   </p>
                 </div>
@@ -1024,12 +1048,20 @@ const JobApplicationForm = () => {
                   )}
                 </div>
               ) : (
+                // <p className="font-medium">
+                //   {[
+                //     ...submittedFormData.programmingSkills.filter(skill => skill !== 'อื่นๆ'),
+                //     ...submittedFormData.programmingSkills
+                //       .filter(skill => skill === 'อื่นๆ')
+                //       .map(skill => `${skill} (${submittedFormData.otherProgrammingSkill?.replace(/\s+/g, '')})`)
+                //   ].join(',')}
+                // </p>
                 <p className="font-medium">
                   {[
                     ...submittedFormData.programmingSkills.filter(skill => skill !== 'อื่นๆ'),
                     ...submittedFormData.programmingSkills
                       .filter(skill => skill === 'อื่นๆ')
-                      .map(skill => `${skill} (${submittedFormData.otherProgrammingSkill?.replace(/\s+/g, '')})`)
+                      .map(skill => `${skill} (${submittedFormData.otherProgrammingSkill})`)
                   ].join(',')}
                 </p>
               )}
@@ -1076,14 +1108,22 @@ const JobApplicationForm = () => {
                   )}
                 </div>
               ) : (
+                // <p className="font-medium">
+                //   {[
+                //     ...submittedFormData.frameworks.filter(framework => framework !== 'อื่นๆ'),
+                //     ...submittedFormData.frameworks
+                //       .filter(framework => framework === 'อื่นๆ')
+                //       .map(framework => `${framework} (${submittedFormData.otherFramework?.replace(/\s+/g, '')})`)
+                //   ].join(',')}
+                // </p>
                 <p className="font-medium">
-                  {[
-                    ...submittedFormData.frameworks.filter(framework => framework !== 'อื่นๆ'),
-                    ...submittedFormData.frameworks
-                      .filter(framework => framework === 'อื่นๆ')
-                      .map(framework => `${framework} (${submittedFormData.otherFramework?.replace(/\s+/g, '')})`)
-                  ].join(',')}
-                </p>
+                {[
+                  ...submittedFormData.frameworks.filter(framework => framework !== 'อื่นๆ'),
+                  ...submittedFormData.frameworks
+                    .filter(framework => framework === 'อื่นๆ')
+                    .map(framework => `${framework} (${submittedFormData.otherFramework})`)
+                ].join(',')}
+              </p>
               )}
             </div>
 
@@ -1130,12 +1170,20 @@ const JobApplicationForm = () => {
                   )}
                 </div>
               ) : (
+                // <p className="font-medium">
+                //   {[
+                //     ...submittedFormData.languages.filter(language => language !== 'อื่นๆ'),
+                //     ...submittedFormData.languages
+                //       .filter(language => language === 'อื่นๆ')
+                //       .map(language => `${language} (${submittedFormData.otherLanguage?.replace(/\s+/g, '')})`)
+                //   ].join(',')}
+                // </p>
                 <p className="font-medium">
                   {[
                     ...submittedFormData.languages.filter(language => language !== 'อื่นๆ'),
                     ...submittedFormData.languages
                       .filter(language => language === 'อื่นๆ')
-                      .map(language => `${language} (${submittedFormData.otherLanguage?.replace(/\s+/g, '')})`)
+                      .map(language => `${language} (${submittedFormData.otherLanguage})`)
                   ].join(',')}
                 </p>
               )}
